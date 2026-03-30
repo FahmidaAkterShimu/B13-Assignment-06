@@ -25,7 +25,7 @@ const Navbar = () => {
 
                     {/* logo */}
                     <a href="">
-                        <img className='h-5 md:h-full' src="DigiTools.png" alt="" />
+                        <img className='h-5 lg:h-full' src="DigiTools.png" alt="" />
                     </a>
                 </div>
 
@@ -72,11 +72,17 @@ const Navbar = () => {
                     </button>
 
                     {/* get started btn */}
-                    <a className="btn bg-linear-to-b from-[#4F39F6] to-[#9514FA] text-white rounded-full py-5">
+                    <a className="btn hidden md:flex  bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white rounded-full py-5">
                         Get Started
                     </a>
                 </div>
             </div>
+
+            {/* get started btn */}
+            <a className="btn md:hidden flex bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white rounded-full py-5 w-40 mx-auto mb-2">
+                Get Started
+            </a>
+
         </div>
     );
 };
