@@ -14,10 +14,15 @@ const Banner = () => {
 
 
                 <div>
-                    <div className="badge badge-soft badge-primary text-base font-medium text-[#4F39F6] rounded-full py-4 px-4 my-4">
+                    {/* <div className="badge badge-soft badge-primary text-base font-medium text-[#4F39F6] rounded-full py-4 px-4 my-4">
                         <img src="online.png" alt="" />
                         New: AI-Powered Tools Available
-                    </div>
+                    </div> */}
+                    <div className="badge badge-soft badge-primary text-base font-medium text-[#4F39F6] rounded-full py-4 px-4 my-4">
+                        <div className="inline-grid *:[grid-area:1/1]">
+                            <div className="status status-primary animate-ping"></div>
+                            <div className="status status-primary"></div>
+                        </div> New: AI-Powered Tools Available </div>
 
                     <h1 className="text-4xl md:text-7xl font-bold md:font-extrabold leading-12 md:leading-20">Supercharge Your Digital Workflow</h1>
                     <p className="max-w-158 text-md md:text-lg md:leading-8 text-[#627382] py-6">
@@ -35,7 +40,7 @@ const Banner = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 
