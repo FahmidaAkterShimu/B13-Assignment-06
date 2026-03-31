@@ -2,11 +2,11 @@ import React from 'react';
 
 const Steps = () => {
     return (
-        <div className='bg-[#F9FAFC] py-30 mx-4 lg:mx-0'>
+        <div className='bg-[#F9FAFC] py-10 md:py-30 mx-4 lg:mx-0'>
             <div className='max-w-300 mx-auto'>
 
                 <div className='text-center mb-10'>
-                    <h2 className='text-5xl font-extrabold text-[#101727] mb-4'>Get Started in 3 Steps</h2>
+                    <h2 className='text-4xl md:text-5xl font-extrabold text-[#101727] mb-4'>Get Started in 3 Steps</h2>
                     <p className='text-base text-[#627382]'>Start using premium digital tools in minutes, not hours.</p>
                 </div>
 

@@ -31,7 +31,7 @@ const Navbar = () => {
 
                 {/* for large device */}
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1 font-semibold text-base hover:rounded-full">
+                    <ul className="menu menu-horizontal px-1 font-semibold text-base">
                         <li><a>Products</a></li>
                         <li><a>Features</a></li>
                         <li><a>Pricing</a></li>
