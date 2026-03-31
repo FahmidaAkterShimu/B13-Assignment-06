@@ -6,7 +6,7 @@ const Pricing = ({ pricingPromise }) => {
     const pricingData = use(pricingPromise);
 
     return (
-        <div className='max-w-300 mx-auto py-10 md:py-30 px-2 lg:px-0'>
+        <div className='max-w-300 mx-auto py-10 md:py-30 px-2 md:px-4'>
             <div className='text-center mb-10'>
                 <h2 className='text-4xl md:text-5xl font-extrabold mb-4'>Simple, Transparent Pricing</h2>
                 <p className='text-base text-[#627382]'>Choose the plan that fits your needs. Upgrade or downgrade anytime.</p>
