@@ -24,13 +24,13 @@ const Banner = () => {
                             <div className="status status-primary"></div>
                         </div> New: AI-Powered Tools Available </div>
 
-                    <h1 className="text-4xl md:text-7xl font-bold md:font-extrabold leading-12 md:leading-20">Supercharge Your Digital Workflow</h1>
-                    <p className="max-w-158 text-md md:text-lg md:leading-8 text-[#627382] py-6">
+                    <h1 className="text-4xl md:text-7xl font-bold md:font-extrabold text-[#101727] leading-12 md:leading-20">Supercharge Your Digital Workflow</h1>
+                    <p className="md:max-w-158 text-md md:text-lg md:leading-8 text-[#627382] py-6">
                         Access premium AI tools, design assets, templates, and productivity
                         software—all in one place. Start creating faster today. <br />
                         Explore Products
                     </p>
-                    <div className='flex gap-4'>
+                    <div className='flex gap-2 md:gap-4'>
                         <button className="btn btn-primary bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white rounded-full">Explore Products</button>
                         <button className='btn btn-outline btn-primary rounded-full border-[#4F39F6] hover:bg-[#4F39F6] text-base font-bold'>
                             {/* <img src="Play.png" alt="" /> */}
