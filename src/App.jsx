@@ -37,7 +37,11 @@ function App() {
       <Counter></Counter>
 
 
-      <Suspense fallback={<span className="loading loading-spinner loading-lg"></span>}>
+      <Suspense fallback={
+        <div className="flex items-center justify-center py-30">
+          <span className="loading loading-spinner loading-lg"></span>
+        </div>
+      }>
         {selected === "products"
           ? <Premium
             premiumPromise={premiumPromise}
@@ -58,7 +62,11 @@ function App() {
 
       <Steps></Steps>
 
-      <Suspense fallback={<span className="loading loading-spinner loading-lg"></span>}>
+      <Suspense fallback={
+        <div className="flex items-center justify-center py-30">
+          <span className="loading loading-spinner loading-lg"></span>
+        </div>
+      }>
         <Pricing pricingPromise={pricingPromise}></Pricing>
       </Suspense>
 
