@@ -1,16 +1,30 @@
-# React + Vite
+<b> 🚀 DigiTools 
+<br>
+Hi there! DigiTools is a passion project I built to explore the future of the web. It’s a modern, snappy SaaS marketplace where you can browse premium digital tools, compare pricing, and manage a shopping cart—all powered by the latest and greatest in the React ecosystem.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<b> 📖 Description
+<br>
+I wanted to build a platform that feels as smooth as a native app. DigiTools allows users to explore a curated catalog of software, check out transparent subscription tiers, and handle a full checkout flow. The goal was to combine a clean "SaaS-style" aesthetic with high-performance code.
 
-Currently, two official plugins are available:
+<b> 💻 Tech Stack
+<ul>
+<li> Core: React 19 (Latest)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+<li> Build Tool: Vite 8 
 
-## React Compiler
+<li> Styling: Tailwind CSS v4 (Gradients & Custom Utilities)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+<li> State: React Hooks (useState, use API)
 
-## Expanding the ESLint configuration
+<li> UI Feedback: React Toastify & React Suspense
+</ul>
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+<b>✨ Key Features</b>
+1. Next-Gen Data Orchestration
+Utilizes React 19’s new use() API for declarative data fetching. Integrated with Suspense and custom loading spinners, it ensures a smooth, non-blocking UI while resolving product and pricing data.
+
+2. Interactive Cart Engine
+Features a smart shopping cart with Duplicate Prevention (via find), Real-time Price Calculation (via reduce), and Dynamic UI Feedback where buttons instantly reflect the "Added" state.
+
+3. Dynamic Pricing Architecture
+A sophisticated pricing system that uses Conditional Rendering to highlight specific plans (e.g., "Most Popular"). The UI automatically adapts styles, badges, and button themes based on data properties.   eta same rakho shudhu kisu tag add kore dao
