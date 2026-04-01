@@ -1,5 +1,6 @@
 import React from 'react';
 import { toast } from 'react-toastify';
+import PremiumTab from './PremiumTab';
 
 const Cart = ({ selected, setSelected, carts, setCarts }) => {
     console.log(carts);
@@ -17,23 +18,10 @@ const Cart = ({ selected, setSelected, carts, setCarts }) => {
     }
     return (
         <div className='max-w-300 mx-auto py-10 md:py-30 px-2 md:px-0'>
-            <div className='text-center space-y-4 mb-10'>
-                <h2 className='text-4xl md:text-5xl font-bold md:font-extrabold text-[#101727]'>Premium Digital Tools</h2>
-                <p className='text-base text-[#627382]'>Choose from our curated collection of premium digital products designed <br /> to boost your productivity and creativity.</p>
-                <div className='flex justify-center'>
-                    <div className='border border-[#F6F6F6] rounded-full p-1'>
-                        <button
-                            onClick={() => setSelected("products")}
-                            className={`btn py-6 px-6 text-base font-bold rounded-full ${selected === "products" ? "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white shadow-sm" : "btn-ghost text-[#25065D]"}`}>Products</button>
-                        <button
-                            onClick={() => setSelected("cart")}
-                            className={`btn py-6 px-6 text-base font-bold rounded-full  ${selected === "cart" ? "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white shadow-sm" : "btn btn-ghost text-[#25065D]"}`}>Cart (0)</button>
-                    </div>
-                </div>
-            </div>
+            
+            <PremiumTab selected={selected} setSelected={setSelected} carts={carts}></PremiumTab>
 
-
-
+            {/* Card container */}
             <div className="p-10 max-w-300 mx-auto space-y-6 border border-[#F2F2F2] rounded-2xl">
                 <h1 className='text-2xl font-bold text-[#101727]'>Your Cart</h1>
 
@@ -47,17 +35,17 @@ const Cart = ({ selected, setSelected, carts, setCarts }) => {
                             {
                                 carts.map(item =>
                                     <div key={item.id} className="flex justify-between items-center gap-4 bg-[#F9FAFC] hover:border-[#9514FA] rounded-2xl py-5.5 px-5">
-                                        
+
                                         <div className='flex justify-start items-center gap-4'>
                                             <div className='flex justify-start items-center'>
-                                            <div className='bg-white rounded-full border border-[#F2F2F2] p-3.5'>
-                                                <img src={item.image} alt="" />
+                                                <div className='bg-white rounded-full border border-[#F2F2F2] p-3.5'>
+                                                    <img src={item.image} alt="" />
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div>
-                                            <h2 className="text-xl font-semibold mb-2">{item.title}</h2>
-                                            <p className="text-base font-medium text-[#627382]">${item.price}</p>
-                                        </div>
+                                            <div>
+                                                <h2 className="text-xl font-semibold mb-2">{item.title}</h2>
+                                                <p className="text-base font-medium text-[#627382]">${item.price}</p>
+                                            </div>
 
                                         </div>
 
