@@ -11,6 +11,8 @@ import Premium from './components/PremiumSection/Premium'
 
 const pricingPromise = fetch('pricingData.json').then(res => res.json())
 
+const premiumPromise = fetch('toolsData.json').then(res => res.json())
+
 function App() {
 
   return (
@@ -19,7 +21,9 @@ function App() {
       <Banner></Banner>
       <Counter></Counter>
 
-      <Premium></Premium>
+      <Suspense fallback={<span className="loading loading-spinner loading-lg"></span>}>
+        <Premium premiumPromise={premiumPromise}></Premium>
+      </Suspense>
 
       <Steps></Steps>
 
