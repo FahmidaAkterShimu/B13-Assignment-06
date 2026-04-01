@@ -1,4 +1,4 @@
-import { Suspense } from 'react'
+import { Suspense, useState } from 'react'
 import './App.css'
 import Banner from './components/Banner'
 import Counter from './components/Counter'
@@ -7,6 +7,7 @@ import Navbar from './components/Navbar'
 import Pricing from './components/PricinigSection/Pricing'
 import Steps from './components/Steps'
 import Premium from './components/PremiumSection/Premium'
+import Cart from './components/Cart'
 
 
 const pricingPromise = fetch('pricingData.json').then(res => res.json())
@@ -14,6 +15,8 @@ const pricingPromise = fetch('pricingData.json').then(res => res.json())
 const premiumPromise = fetch('toolsData.json').then(res => res.json())
 
 function App() {
+  const [selected, setSelected] = useState("products");
+  const [carts, setCarts] = useState([]);
 
   return (
     <>
@@ -22,8 +25,23 @@ function App() {
       <Counter></Counter>
 
       <Suspense fallback={<span className="loading loading-spinner loading-lg"></span>}>
-        <Premium premiumPromise={premiumPromise}></Premium>
+        {selected === "products"
+          ? <Premium
+            premiumPromise={premiumPromise}
+            selected={selected}
+            setSelected={setSelected}
+            carts={carts}
+            setCarts={setCarts}
+          ></Premium>
+
+          : <Cart
+            selected={selected}
+            setSelected={setSelected}
+            carts={carts}
+            setCarts={setCarts}
+          ></Cart>}
       </Suspense>
+
 
       <Steps></Steps>
 

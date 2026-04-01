@@ -23,7 +23,7 @@ const PricingCard = ({ pricing }) => {
 
                 <ul className="mt-6 flex flex-col gap-2 text-base font-medium">
                     {
-                        features.map(feature => <PricingFeature feature={feature}></PricingFeature>)
+                        features.map((feature,i) => <PricingFeature key={i} feature={feature}></PricingFeature>)
                     }
                 </ul>
 

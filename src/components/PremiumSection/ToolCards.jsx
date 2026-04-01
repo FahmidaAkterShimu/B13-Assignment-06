@@ -1,8 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import CardsFeature from './CardsFeature';
+import { toast } from 'react-toastify';
 
-const ToolCards = ({ tool }) => {
+const ToolCards = ({ tool, carts, setCarts }) => {
     const { title, description, price, pricingType, status, image, features } = tool;
+
+    const [isPurchased, setIsPurchased] = useState(false);
+
+    const handlePurchase = () => {
+        setIsPurchased(true);
+
+        const isFound = carts.find(item => item.id === tool.id);
+        if (isFound) {
+            toast.error("Item already in cart!");
+            return;
+        };
+
+        setCarts([...carts, tool]);
+        toast.success("Item added to cart!");
+    }
+
 
     return (
         <div className="card border border-[#F2F2F2] shadow-sm rounded-2xl">
@@ -27,14 +44,18 @@ const ToolCards = ({ tool }) => {
 
                 <ul className="flex flex-col gap-2 text-base font-medium text-[#627382]">
 
-                    {features.map(cardFeatures =>
-                        <CardsFeature cardFeatures={cardFeatures}></CardsFeature>
+                    {features.map((cardFeatures, i) =>
+                        <CardsFeature key={i} cardFeatures={cardFeatures}></CardsFeature>
                     )}
 
                 </ul>
 
                 <div>
-                    <button className="btn btn-block bg-linear-to-r from-[#4F39F6] to-[#9514FA] rounded-full text-base font-bold text-white py-6">Buy Now</button>
+                    <button
+                        onClick={handlePurchase}
+                        className={`btn btn-block ${isPurchased? "bg-[#0A883E]" : "bg-linear-to-r from-[#4F39F6] to-[#9514FA]"} rounded-full text-base font-bold text-white py-6`}>
+                        {isPurchased ? "Added to cart" : "Buy Now"}
+                    </button>
                 </div>
             </div>
         </div>

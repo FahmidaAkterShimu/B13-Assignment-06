@@ -1,9 +1,7 @@
-import React, { use, useState } from 'react';
+import React, { use } from 'react';
 import ToolCards from './ToolCards';
 
-const Premium = ({ premiumPromise }) => {
-    const [selected, setSelected] = useState("products");
-
+const Premium = ({ premiumPromise, selected, setSelected, carts, setCarts }) => {
     const toolData = use(premiumPromise);
 
     return (
@@ -30,7 +28,10 @@ const Premium = ({ premiumPromise }) => {
                 {
                     toolData.map(tool => <ToolCards
                         key={tool.id}
-                        tool={tool}></ToolCards>)
+                        tool={tool}
+                        carts={carts} 
+                        setCarts={setCarts}
+                    ></ToolCards>)
                 }
 
 
