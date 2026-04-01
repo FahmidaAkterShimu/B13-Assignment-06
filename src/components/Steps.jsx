@@ -6,7 +6,7 @@ const Steps = () => {
             <div className='max-w-300 mx-auto'>
 
                 <div className='text-center mb-10'>
-                    <h2 className='text-4xl md:text-5xl font-extrabold text-[#101727] mb-4'>Get Started in 3 Steps</h2>
+                    <h2 className='text-4xl md:text-5xl font-bold md:font-extrabold text-[#101727] mb-4'>Get Started in 3 Steps</h2>
                     <p className='text-base text-[#627382]'>Start using premium digital tools in minutes, not hours.</p>
                 </div>
 
